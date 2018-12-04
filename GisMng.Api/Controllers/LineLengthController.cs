@@ -13,6 +13,10 @@ namespace GisMng.Api.Controllers
         {
             _lineLengthService = lineLengthService;
         }
+        /// <summary>
+        /// 获取所有线路长度数据
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAll")]
         public List<LineLength> GetAll()
         {

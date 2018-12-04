@@ -56,8 +56,34 @@
         </member>
         <member name="M:GisMng.Api.Controllers.LineCapacityController.GetAll">
             <summary>
-            获取所有线路容量信息
+            获取所有线路容量数据
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GisMng.Api.Controllers.LineLengthController.GetAll">
+            <summary>
+            获取所有线路长度数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GisMng.Api.Controllers.UserController.GetAllUser">
+            <summary>
+            获取所有用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GisMng.Api.Controllers.UserController.GetUserById(System.Int32)">
+            <summary>
+            根据id获取用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GisMng.Api.Controllers.UserController.GetUserByName(System.String)">
+            <summary>
+            根据用户名获取用户信息
+            </summary>
+            <param name="id"></param>
             <returns></returns>
         </member>
     </members>

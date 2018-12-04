@@ -15,18 +15,37 @@ namespace GisMng.Api.Controllers
         {
             _userService = userService;
         }
+        /// <summary>
+        /// 获取所有用户信息
+        /// </summary>
+        /// <returns></returns>
         // GET api/values
         [HttpGet("GetAllUser")]
         public List<User> GetAllUser()
         {
             return _userService.GetAllUser();
         }
-
+        /// <summary>
+        /// 根据id获取用户信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET api/values/5
         [HttpGet("GetUserById")]
         public User GetUserById(int id)
         {
             return _userService.GetUserById(id);
+        }
+        /// <summary>
+        /// 根据用户名获取用户信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET api/values/5
+        [HttpGet("GetUserByName")]
+        public User GetUserByName(string name)
+        {
+            return _userService.GetUserByName(name);
         }
     }
 }

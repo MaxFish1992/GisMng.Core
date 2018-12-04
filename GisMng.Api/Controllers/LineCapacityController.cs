@@ -14,7 +14,7 @@ namespace GisMng.Api.Controllers
             _lineCapacityService = lineCapacityService;
         }
         /// <summary>
-        /// 获取所有线路容量信息
+        /// 获取所有线路容量数据
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAll")]

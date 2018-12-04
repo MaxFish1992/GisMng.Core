@@ -4,9 +4,18 @@
         <name>GisMng.Service</name>
     </assembly>
     <members>
+        <member name="T:GisMng.Service.BaseService">
+            <summary>
+            功能描述    ：基础服务  
+            创 建 者    ：huangwei
+            创建日期    ：2018/12/4 14:31:48 
+            最后修改者  ：Administrator
+            最后修改日期：2018/12/4 14:31:48 
+            </summary>
+        </member>
         <member name="T:GisMng.Service.Services.LineCapacityService">
             <summary>
-            功能描述    ：LineCapacityService  
+            功能描述    ：线路容量服务  
             创 建 者    ：huangwei
             创建日期    ：2018/12/4 13:34:52 
             最后修改者  ：Administrator
@@ -15,7 +24,7 @@
         </member>
         <member name="T:GisMng.Service.Services.LineLengthService">
             <summary>
-            功能描述    ：LineLengthService  
+            功能描述    ：线路长度服务  
             创 建 者    ：huangwei
             创建日期    ：2018/12/4 13:41:18 
             最后修改者  ：Administrator
@@ -24,7 +33,7 @@
         </member>
         <member name="T:GisMng.Service.Services.UserService">
             <summary>
-            功能描述    ：UserService  
+            功能描述    ：用户服务  
             创 建 者    ：huangwei
             创建日期    ：2018/12/4 13:40:44 
             最后修改者  ：Administrator

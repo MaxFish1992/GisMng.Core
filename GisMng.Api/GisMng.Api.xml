@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GisMng.Api</name>
+    </assembly>
+    <members>
+        <member name="T:GisMng.Api.Common.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="F:GisMng.Api.Common.Result._code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="F:GisMng.Api.Common.Result._message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="F:GisMng.Api.Common.Result._data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:GisMng.Api.Common.Result.#ctor(GisMng.Api.Common.StateCode,System.String,System.Object)">
+            <summary>
+            初始化返回结果
+            </summary>
+            <param name="code">状态码</param>
+            <param name="message">消息</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="T:GisMng.Api.Common.StateCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="F:GisMng.Api.Common.StateCode.Ok">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:GisMng.Api.Common.StateCode.Fail">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="M:GisMng.Api.Common.WebApiControllerBase.Success(System.Object,System.String)">
+            <summary>
+            返回成功消息
+            </summary>
+            <param name="data">数据</param>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:GisMng.Api.Controllers.LineCapacityController.GetAll">
+            <summary>
+            获取所有线路容量信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

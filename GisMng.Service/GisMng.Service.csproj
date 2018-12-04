@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\331\后台代码\GisMng.Api\GisMng.Service\GisMng.Service.xml</DocumentationFile>
+    <OutputPath>..\GisMng.Api\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GisMng.Common\GisMng.Common.csproj" />
+    <ProjectReference Include="..\GisMng.IService\GisMng.IService.csproj" />
+    <ProjectReference Include="..\GisMng.Models\GisMng.Models.csproj" />
+  </ItemGroup>
+
+</Project>

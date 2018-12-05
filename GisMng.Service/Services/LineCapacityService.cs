@@ -1,5 +1,6 @@
 ﻿using GisMng.Common.Helpers;
 using GisMng.IService.IServices;
+using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using System.Collections.Generic;
 
@@ -14,9 +15,9 @@ namespace GisMng.Service.Services
     /// </summary>
     public class LineCapacityService : ILineCapacityService
     {
-        public List<LineCapacity> GetAll()
+        public List<LineCapacityDto> GetAll()
         {
-            return SqliteHelper.QueryAll<LineCapacity>("select * from LineCapacity");
+            return SqliteHelper.QueryAll<LineCapacityDto>("select * from LineCapacity");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using GisMng.Api.Common;
 using GisMng.Common.Helpers;
 using GisMng.IService.IServices;
+using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,7 @@ namespace GisMng.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAll")]
-        public List<LineCapacity> GetAll()
+        public List<LineCapacityDto> GetAll()
         {
             log.Info("获取所有线路容量数据");
             return _lineCapacityService.GetAll();

@@ -1,4 +1,5 @@
-﻿using GisMng.Models.Models;
+﻿using GisMng.Models.ModelDto;
+using GisMng.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,6 @@ namespace GisMng.IService.IServices
     /// </summary>
     public interface ILineLengthService
     {
-        List<LineLength> GetAll();
+        List<LineLengthDto> GetAll();
     }
 }

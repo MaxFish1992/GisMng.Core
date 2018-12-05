@@ -1,5 +1,6 @@
 ﻿using GisMng.Common.Helpers;
 using GisMng.IService.IServices;
+using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using System.Collections.Generic;
 
@@ -14,9 +15,9 @@ namespace GisMng.Service.Services
     /// </summary>
     public class LineLengthService : ILineLengthService
     {
-        public List<LineLength> GetAll()
+        public List<LineLengthDto> GetAll()
         {
-            return SqliteHelper.QueryAll<LineLength>("select * from LineLength");
+            return SqliteHelper.QueryAll<LineLengthDto>("select * from LineLength");
         }
     }
 }

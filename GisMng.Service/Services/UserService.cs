@@ -1,5 +1,6 @@
 ﻿using GisMng.Common.Helpers;
 using GisMng.IService.IServices;
+using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using System.Collections.Generic;
 
@@ -14,19 +15,19 @@ namespace GisMng.Service.Services
     /// </summary>
     public class UserService : IUserService
     {
-        public List<User> GetAllUser()
+        public List<UserDto> GetAllUser()
         {
-            return SqliteHelper.QueryAll<User>("select * from User");
+            return SqliteHelper.QueryAll<UserDto>("select * from User");
         }
 
-        public User GetUserById(int id)
+        public UserDto GetUserById(int id)
         {
-            return SqliteHelper.Query<User>(string.Format("select * from User where id={0}", id));
+            return SqliteHelper.Query<UserDto>(string.Format("select * from User where id={0}", id));
         }
 
-        public User GetUserByName(string name)
+        public UserDto GetUserByName(string name)
         {
-            return SqliteHelper.Query<User>(string.Format("select * from User where name={0}", name));
+            return SqliteHelper.Query<UserDto>(string.Format("select * from User where name={0}", name));
         }
     }
 }

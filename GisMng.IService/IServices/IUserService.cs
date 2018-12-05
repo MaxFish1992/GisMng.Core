@@ -1,4 +1,5 @@
-﻿using GisMng.Models.Models;
+﻿using GisMng.Models.ModelDto;
+using GisMng.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,8 +15,8 @@ namespace GisMng.IService.IServices
     /// </summary>
     public interface IUserService
     {
-        List<User> GetAllUser();
-        User GetUserById(int id);
-        User GetUserByName(string name);
+        List<UserDto> GetAllUser();
+        UserDto GetUserById(int id);
+        UserDto GetUserByName(string name);
     }
 }

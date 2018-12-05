@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using GisMng.Api.Common;
 using GisMng.IService.IServices;
+using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,7 @@ namespace GisMng.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAll")]
-        public List<LineLength> GetAll()
+        public List<LineLengthDto> GetAll()
         {
             return _lineLengthService.GetAll();
         }

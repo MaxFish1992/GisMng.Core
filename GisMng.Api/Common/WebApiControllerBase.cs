@@ -18,7 +18,7 @@ namespace GisMng.Api.Common
         /// </summary>
         /// <param name="data">数据</param>
         /// <param name="message">消息</param>
-        protected virtual IActionResult Success(dynamic data = null, string message = null)
+        protected virtual IActionResult Success(object data = null, string message = null)
         {
             if (message == null)
                 message = "Success";

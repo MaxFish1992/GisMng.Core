@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using GisMng.Api.AutoModule;
+using GisMng.Api.Middleware;
 using log4net;
 using log4net.Config;
 using log4net.Repository;
@@ -33,6 +34,12 @@ namespace GisMng.Api
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(WebApiResultMiddleware));
+                options.RespectBrowserAcceptHeader = true;
+            });
 
             services.AddCors(options =>
             {

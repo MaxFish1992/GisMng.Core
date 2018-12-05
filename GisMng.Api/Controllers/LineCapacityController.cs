@@ -26,7 +26,7 @@ namespace GisMng.Api.Controllers
         [HttpGet("GetAll")]
         public List<LineCapacityDto> GetAll()
         {
-            log.Info("获取所有线路容量数据");
+            //log.Info("获取所有线路容量数据");
             return _lineCapacityService.GetAll();
         }
     }

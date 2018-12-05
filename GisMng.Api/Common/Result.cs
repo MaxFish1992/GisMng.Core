@@ -22,7 +22,7 @@ namespace GisMng.Api.Common
         /// <summary>
         /// 数据
         /// </summary>
-        private readonly dynamic _data;
+        private readonly object _data;
 
         /// <summary>
         /// 初始化返回结果
@@ -30,7 +30,7 @@ namespace GisMng.Api.Common
         /// <param name="code">状态码</param>
         /// <param name="message">消息</param>
         /// <param name="data">数据</param>
-        public Result(StateCode code, string message, dynamic data = null) : base(null)
+        public Result(StateCode code, string message, object data = null) : base(null)
         {
             _code = code;
             _message = message;

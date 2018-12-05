@@ -1,8 +1,6 @@
 ﻿using GisMng.Api.Common;
-using GisMng.Common.Helpers;
 using GisMng.IService.IServices;
 using GisMng.Models.ModelDto;
-using GisMng.Models.Models;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

@@ -5,13 +5,17 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisMng.Api", "GisMng.Api\GisMng.Api.csproj", "{B2692365-33C2-46E4-859F-B56ADF3F361E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.Service", "GisMng.Service\GisMng.Service.csproj", "{D24267A6-B501-44B7-B693-DF1A80A2F2D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisMng.Service", "GisMng.Service\GisMng.Service.csproj", "{D24267A6-B501-44B7-B693-DF1A80A2F2D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.Common", "GisMng.Common\GisMng.Common.csproj", "{D3B29509-2D18-4578-BB85-57B752EE0F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisMng.Common", "GisMng.Common\GisMng.Common.csproj", "{D3B29509-2D18-4578-BB85-57B752EE0F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.Models", "GisMng.Models\GisMng.Models.csproj", "{9B735E13-460D-4789-912A-989F12C7F128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisMng.Models", "GisMng.Models\GisMng.Models.csproj", "{9B735E13-460D-4789-912A-989F12C7F128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.IService", "GisMng.IService\GisMng.IService.csproj", "{080B2A76-6541-424A-ADB4-7ECF92FCFFA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisMng.IService", "GisMng.IService\GisMng.IService.csproj", "{080B2A76-6541-424A-ADB4-7ECF92FCFFA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.IRepository", "GisMng.IRepository\GisMng.IRepository.csproj", "{A9101F4D-8508-40D3-968E-8BB9CDD8852E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisMng.Repository", "GisMng.Repository\GisMng.Repository.csproj", "{11443DCF-5646-4501-BEA6-CAC213410471}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{080B2A76-6541-424A-ADB4-7ECF92FCFFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{080B2A76-6541-424A-ADB4-7ECF92FCFFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{080B2A76-6541-424A-ADB4-7ECF92FCFFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9101F4D-8508-40D3-968E-8BB9CDD8852E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9101F4D-8508-40D3-968E-8BB9CDD8852E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9101F4D-8508-40D3-968E-8BB9CDD8852E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9101F4D-8508-40D3-968E-8BB9CDD8852E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11443DCF-5646-4501-BEA6-CAC213410471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11443DCF-5646-4501-BEA6-CAC213410471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11443DCF-5646-4501-BEA6-CAC213410471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11443DCF-5646-4501-BEA6-CAC213410471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

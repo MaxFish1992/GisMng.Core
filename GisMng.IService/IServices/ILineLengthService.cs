@@ -3,6 +3,7 @@ using GisMng.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GisMng.IService.IServices
 {
@@ -15,6 +16,6 @@ namespace GisMng.IService.IServices
     /// </summary>
     public interface ILineLengthService
     {
-        List<LineLengthDto> GetAll();
+        Task<IEnumerable<LineLengthDto>> GetAllAsync();
     }
 }

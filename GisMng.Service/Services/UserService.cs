@@ -3,6 +3,7 @@ using GisMng.IService.IServices;
 using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GisMng.Service.Services
 {
@@ -15,19 +16,19 @@ namespace GisMng.Service.Services
     /// </summary>
     public class UserService : IUserService
     {
-        public List<UserDto> GetAllUser()
+        public async Task<IEnumerable<UserDto>> GetAllUser()
         {
-            return SqliteHelper.QueryAll<UserDto>("select * from User");
+            return await SqliteHelper.GetAllAsync<UserDto>();
         }
 
-        public UserDto GetUserById(int id)
+        public async Task<UserDto> GetUserById(int id)
         {
-            return SqliteHelper.Query<UserDto>(string.Format("select * from User where id={0}", id));
+            return await SqliteHelper.GetAsync<UserDto>(id);
         }
 
-        public UserDto GetUserByName(string name)
+        public async Task<UserDto> GetUserByName(string name)
         {
-            return SqliteHelper.Query<UserDto>(string.Format("select * from User where name={0}", name));
+            return await SqliteHelper.GetAsync<UserDto>(name);
         }
     }
 }

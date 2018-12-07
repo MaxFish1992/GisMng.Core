@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using GisMng.Api.Common;
 using GisMng.IService.IServices;
 using GisMng.Models.ModelDto;
@@ -22,7 +23,7 @@ namespace GisMng.Api.Controllers
         /// <returns></returns>
         // GET api/values
         [HttpGet("GetAllUser")]
-        public List<UserDto> GetAllUser()
+        public Task<IEnumerable<UserDto>> GetAllUser()
         {
             return _userService.GetAllUser();
         }
@@ -33,7 +34,7 @@ namespace GisMng.Api.Controllers
         /// <returns></returns>
         // GET api/values/5
         [HttpGet("GetUserById")]
-        public UserDto GetUserById(int id)
+        public Task<UserDto> GetUserById(int id)
         {
             return _userService.GetUserById(id);
         }
@@ -44,7 +45,7 @@ namespace GisMng.Api.Controllers
         /// <returns></returns>
         // GET api/values/5
         [HttpGet("GetUserByName")]
-        public UserDto GetUserByName(string name)
+        public Task<UserDto> GetUserByName(string name)
         {
             return _userService.GetUserByName(name);
         }

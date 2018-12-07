@@ -86,6 +86,10 @@ namespace GisMng.Api
             var assemblysService = Assembly.LoadFile(serviceDllFile);
             builder.RegisterAssemblyTypes(assemblysService).AsImplementedInterfaces();
 
+            var repositoryDllFile = Path.Combine(basePath, "GisMng.Repository.dll");//获取注入项目绝对路径
+            var assemblysRepository = Assembly.LoadFile(repositoryDllFile);
+            builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
+
 
             //将services填充Autofac容器生成器
             builder.Populate(services);

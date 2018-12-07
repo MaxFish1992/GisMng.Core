@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using GisMng.Api.Common;
 using GisMng.IService.IServices;
 using GisMng.Models.ModelDto;
@@ -19,9 +20,9 @@ namespace GisMng.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAll")]
-        public List<LineLengthDto> GetAll()
+        public async Task<IEnumerable<LineLengthDto>> GetAll()
         {
-            return _lineLengthService.GetAll();
+            return await _lineLengthService.GetAllAsync();
         }
     }
 }

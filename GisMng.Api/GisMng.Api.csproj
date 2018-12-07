@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GisMng.Common\GisMng.Common.csproj" />
     <ProjectReference Include="..\GisMng.IRepository\GisMng.IRepository.csproj" />
     <ProjectReference Include="..\GisMng.IService\GisMng.IService.csproj" />
     <ProjectReference Include="..\GisMng.Models\GisMng.Models.csproj" />

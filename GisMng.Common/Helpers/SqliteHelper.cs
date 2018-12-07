@@ -1,9 +1,12 @@
 ﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GisMng.Common.Helpers
 {
@@ -32,25 +35,37 @@ namespace GisMng.Common.Helpers
         /// 获取所有信息
         /// </summary>
         /// <returns></returns>
-        public static List<T> QueryAll<T>(string sql)
+        public static async Task<IEnumerable<T>> GetAllAsync<T>() where T : class, new()
         {
             Open();
-            List<T> users = new List<T>();
-            users = _sqlLiteConnection.Query<T>(sql) as List<T>;
-            _sqlLiteConnection.Close();
-            return users;
+            return await _sqlLiteConnection.GetAllAsync<T>();
         }
         /// <summary>
         /// 根据id获取信息
         /// </summary>
         /// <returns></returns>
-        public static T Query<T>(string sql)
+        public static async Task<T> GetAsync<T>(int id, IDbTransaction transaction = null, int? commandTimeout = null) where T : class, new()
         {
             Open();
-            List<T> users = new List<T>();
-            users = _sqlLiteConnection.Query<T>(sql) as List<T>;
-            _sqlLiteConnection.Close();
-            return users.First<T>();
+            return await _sqlLiteConnection.GetAsync<T>(id);
+        }
+        /// <summary>
+        /// 根据id获取信息
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<T> GetAsync<T>(string id, IDbTransaction transaction = null, int? commandTimeout = null) where T : class, new()
+        {
+            Open();
+            return await _sqlLiteConnection.GetAsync<T>(id);
+        }
+        /// <summary>
+        /// 根据id获取信息
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<T> GetAsync<T>(Guid id, IDbTransaction transaction = null, int? commandTimeout = null) where T : class, new()
+        {
+            Open();
+            return await _sqlLiteConnection.GetAsync<T>(id);
         }
     }
 }

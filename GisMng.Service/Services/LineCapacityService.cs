@@ -3,6 +3,7 @@ using GisMng.IService.IServices;
 using GisMng.Models.ModelDto;
 using GisMng.Models.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GisMng.Service.Services
 {
@@ -15,9 +16,9 @@ namespace GisMng.Service.Services
     /// </summary>
     public class LineCapacityService : ILineCapacityService
     {
-        public List<LineCapacityDto> GetAll()
+        public async Task<IEnumerable<LineCapacityDto>> GetAllAsync()
         {
-            return SqliteHelper.QueryAll<LineCapacityDto>("select * from LineCapacity");
+            return await SqliteHelper.GetAllAsync<LineCapacityDto>();
         }
     }
 }

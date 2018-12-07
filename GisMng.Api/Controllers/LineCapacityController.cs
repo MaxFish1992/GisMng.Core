@@ -4,6 +4,7 @@ using GisMng.Models.ModelDto;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GisMng.Api.Controllers
 {
@@ -22,10 +23,10 @@ namespace GisMng.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAll")]
-        public List<LineCapacityDto> GetAll()
+        public async Task<IEnumerable<LineCapacityDto>> GetAll()
         {
             //log.Info("获取所有线路容量数据");
-            return _lineCapacityService.GetAll();
+            return await _lineCapacityService.GetAllAsync();
         }
     }
 }

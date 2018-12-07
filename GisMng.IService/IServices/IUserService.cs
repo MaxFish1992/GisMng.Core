@@ -3,6 +3,7 @@ using GisMng.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GisMng.IService.IServices
 {
@@ -15,8 +16,8 @@ namespace GisMng.IService.IServices
     /// </summary>
     public interface IUserService
     {
-        List<UserDto> GetAllUser();
-        UserDto GetUserById(int id);
-        UserDto GetUserByName(string name);
+        Task<IEnumerable<UserDto>> GetAllUser();
+        Task<UserDto> GetUserById(int id);
+        Task<UserDto> GetUserByName(string name);
     }
 }
